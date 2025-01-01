@@ -1,0 +1,95 @@
+:root{
+    --clr-green-100: #E2EBE3;
+    --clr-green-900: #1C4920;
+    --clr-white: #FFFFFF;
+    --clr-black: #000000;
+    --clr-grey: #959595;
+    --clr-blue: #0C2A92;
+
+    --ff-primary: 'General Sans', sans-serif;
+    --ff-secondary: 'Cabinet Grotesk', sans-serif;
+
+    --fw-thin: 100;
+    --fw-extra-light: 200;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+    --fw-black: 900;
+   
+    --size-14: 0.875rem;
+    --size-16: 1rem;
+    --size-18: 1.125rem;
+    --size-24: 1.5rem;
+    --size-28: 1.75rem;
+    --size-30: 2.5rem;
+    --size-32: 2rem;
+    --size-36: 2.25rem;
+    --size-40: 2.5rem;
+    --size-44: 2.75rem;
+    --size-48: 3rem;
+    --size-50: 3.125rem;
+    --size-54: 3.375rem;
+    --size-64: 4rem;
+    --size-70: 4.375rem;
+    --size-140: 8.75rem;
+    --size-200: 12.5rem;
+    --size-240: 15rem;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: var(--ff-primary);
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+    font-weight: var(--fw-medium);
+}
+
+
+  
+
+

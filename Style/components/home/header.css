@@ -1,0 +1,95 @@
+@import "style.css";
+@import "utils.css";
+
+
+
+
+.header{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--clr-green-100);
+}
+
+.nav__list{
+    background-color: var(--clr-green-100);
+    border-left: 2px solid var(--clr-green-900);
+    font-weight: var(--fw-semi-medium);
+    height: 100vh;
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    padding: 4rem 2rem;
+    transition: .30s ease;
+    z-index: 100;
+    font-size: 2.5rem;
+}
+
+.menu__item a{
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--clr-green-900);
+    position: relative;
+}
+
+.menu__item a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    border-radius: 5px;
+    width: 0px;
+    background-color: var(--clr-green-900);
+    transition: .30s ease;
+}
+
+.menu__item a:hover:before{
+    width: 105%;
+}
+
+.nav__list.active{
+    right: 0;
+}
+
+.menu{
+    position: relative;
+    z-index: 100;
+}
+
+
+.header__nav-1{
+    display: none;
+}
+
+
+
+@media (min-width: 1024px){
+
+.header__nav{
+    display: none;
+}
+
+.header__nav-1{
+    display: block;
+    width: 100%;
+}
+.nav__list-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav__list-1 div{
+    display: flex;
+    align-items: center;
+}
+
+.nav__item .btn{
+    color: var(--clr-green-900);
+    display: inline-block;
+}
+}

@@ -1,0 +1,189 @@
+@import "style.css";
+@import "utils.css";
+
+
+
+*{
+    font-weight: var(--fw-medium);
+}
+
+input, button, a{
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-medium);
+}
+
+.container{
+    width: 100%;
+    max-width: 404px;
+    padding-inline: 1.5rem;
+    margin-inline: auto;
+}
+
+h1{
+    font-size: var(--size-32);
+    margin-top: 4rem;
+}
+
+.title__desc{
+    margin-top:0.625rem;
+    margin-bottom: 3rem;
+    font-size: var(--size-18);
+}
+
+.input-label{
+    font-size: var(--size-16);
+}
+
+label[for="remember"], .input, form a{
+    font-size: var(--size-14);
+}
+
+label[for="remember"]{
+    margin-left: .3rem;
+}
+
+.rem, .rem > div:first-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox{
+    margin-bottom: 1.2rem;
+}
+
+.rem{
+    margin-top: -1rem;
+}
+
+a{
+    color: var(--clr-blue);
+}
+
+button[type="submit"]{
+    background-color: var(--clr-green-900);
+    padding: .5rem 0;
+    transition: .3s;
+}
+
+button[type="submit"]:hover{
+    background-color: inherit;
+    color: var(--clr-green-900);
+}
+
+button{
+    width: 100%;
+}
+
+.or{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+  
+.or::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+    height: 2px;
+    width: 45%;
+    background-color: rgba(38, 50, 56, .5);
+}
+
+.or::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+    height: 2px;
+    width: 45%;
+    background-color: rgba(38, 50, 56, .5);
+}
+
+.sign-in{
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-bottom: .89rem;
+    border: 1px solid rgba(38, 50, 56, .5);
+    font-size: var(--size-14);
+    font-weight: 500;
+}
+
+.google{
+    height: 20px;
+    width: 20px;
+}
+
+button + p{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+span{
+    text-decoration: underline;
+}
+
+.account{
+    margin-bottom: 1rem;
+}
+
+p a {
+    cursor: pointer;
+}
+
+
+@media (min-width: 1024px){
+
+    h1{
+        margin-top: var(--size-24);
+    }
+
+    button + p{
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 100vh;
+    }
+
+    .wave{
+        position: fixed;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        left: 130px;
+        top: 205px;
+        max-height: 100vh;
+        opacity: 1;
+    }
+    
+    .background{
+        background-image: url(../img/bgc.webp);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .background::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        position: absolute;
+        opacity: .15;
+    }
+}
+
+  
+
+
+

@@ -1,0 +1,68 @@
+@import "style.css";
+@import "utils.css";
+
+
+
+.social svg{
+    height: 30px;
+    width: 30px;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+}
+
+
+
+.footer{
+    background-color: #181818;
+    margin-inline: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: 8px;
+    padding: 64px 48px;
+    color: var(--clr-white);
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-primary);
+}
+
+
+
+.footer__list li{
+    margin-bottom: 1rem;
+}
+
+.footer__list a{
+    color: var(--clr-white);
+}
+
+.footer__list a:hover{
+    text-decoration: underline;
+}
+
+.social{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    padding-bottom: 1.25rem;
+}
+
+
+
+@media (min-width: 700px){
+    .footer__list{
+        display: flex;
+        gap: 5rem;
+        
+    }
+
+    .made-by{
+        text-align: center;
+    }
+}
+
+

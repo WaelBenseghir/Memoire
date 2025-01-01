@@ -1,0 +1,118 @@
+@import "../style.css";
+@import "../utils.css";
+
+
+.section__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+.section__list a{
+    color: var(--clr-black);
+    font-size: var(--size-24);
+    border: 1px solid var(--clr-black);
+    border-radius: 60px;
+    padding: .5rem 1rem;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: .30s;
+    font-weight: var(--fw-medium);
+}
+
+.section__list a:hover{
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+}
+
+.flex-group{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.flex-group .card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h2, .arrow{
+    position: relative;
+    z-index: 2;
+}
+
+.flex-group h2{
+    font-size: var(--size-36);
+}
+
+.flex-group .text{
+    padding-left: 1rem;
+}
+
+
+.flex-item-1{
+    background-image: url(../../../img/lemon.webp);
+}
+.flex-item-2{
+    background-image: url(../../../img/tomato.webp);
+}
+.flex-item-3{
+    background-image: url(../../../img/spinach.webp);
+}
+
+
+@media (min-width: 700px){
+    .section__list{
+        flex-direction: row;
+        gap: 0;
+    }
+
+
+    .section__list a{
+        color: var(--clr-black);
+        font-size: var(--size-18);
+        border: 1px solid var(--clr-black);
+        border-radius: 60px;
+        padding: .5rem 3rem;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        transition: .30s;
+        font-weight: var(--fw-medium);
+    }
+
+    .section__item{
+        margin-bottom: .3rem;
+    }
+
+    
+}
+
+@media (min-width: 1024px){
+    .last__item{
+        margin-left: auto;
+    }
+    .section__item{
+        margin-bottom: 0;
+    }
+    .flex-group{
+        display: flex;
+        align-items: center;
+        
+    }
+    .card{
+        flex-grow: 1;
+        transition: .3s ease-out;
+    }
+    .card:hover{
+        flex-grow: 1;
+        flex-grow: 2;
+    }
+}
+
+

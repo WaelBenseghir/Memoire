@@ -1,0 +1,136 @@
+@import "style.css";
+@import "utils.css";
+
+.grid-group{
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "desc"
+    "img"
+    "btn";
+    gap: 1.5rem;
+}
+
+
+.first-section__text{
+    grid-area: title;
+}
+
+.first-img{
+    grid-area: img;
+}
+
+.first-section__desc{
+    grid-area: desc;
+}
+
+.first-section a{
+    grid-area: btn;
+}
+
+
+
+
+
+
+.first-section{
+    text-align: center;
+}
+
+.first-section__title{
+    font-size: var(--size-54);
+    font-weight: var(--fw-bold);
+}
+
+.first-section__subtitle{
+    font-size: 12px;
+    margin-top: 2rem;
+    font-weight: var(--fw-medium);
+}
+
+.first-section__desc{
+    font-size: var(--size-28);
+    font-weight: var(--fw-extra-bold);
+}
+
+.first-img{
+    border-radius: 32px;
+    display: block;
+    height: 300px;
+    background-image: url(../../../img/bgc.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+.first-section a{
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    font-weight: var(--fw-extra-bold);
+    margin-inline: 0;
+    display: block;
+    border: 1px solid var(--clr-black);
+    transition: .30s;
+    text-align: center;
+}
+
+.first-section a:hover{
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+}
+
+
+
+
+
+@media (min-width: 700px){
+    .grid-group{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "title img"
+        "desc img"
+        "btn .";
+        text-align: left;
+    }
+    .first-section__title{
+        font-size: var(--size-40);
+        margin-top: -.5rem;
+    }
+
+    .first-img{
+        width: 400px;
+    }
+
+    .first-section a{
+        max-width: 365px;
+    }
+
+
+}
+
+
+@media (min-width: 1024px){
+    .grid-group{
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "title title img desc desc desc"
+        "title title img desc desc desc"
+        "btn btn . . . .";
+        text-align: left;
+    }
+
+    .first-img{
+        height: 145px;
+        max-width: 260px;
+    }
+    .cta-btn{
+        width: 320px;
+    }
+
+    .first-section__desc{
+        max-width: 25ch;
+        justify-self: flex-end;
+    }
+}

@@ -1,0 +1,104 @@
+@import "../style.css";
+@import "../utils.css";
+
+
+.third-section__title{
+    font-size: var(--size-64);
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.grid-group-1{
+    display: grid;
+    grid-template-areas: 
+    "plant"
+    "weather"
+    "market"
+    "community";
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.grid-group-1 .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.txt, .arrow{
+    position: relative;
+    z-index: 2;
+}
+
+.grid-group-1 .arrow{
+    align-self: flex-end;
+}
+
+.txt{
+    grid-area: txt;
+    padding: 1rem;
+}
+
+.txt h3{
+    font-size: var(--size-44);
+    margin-bottom: 1rem;
+}
+
+.card-1{
+    grid-area: plant;
+    background-image: url(../../../img/plant4.webp);  
+}
+
+.card-2{
+    grid-area: weather;
+    background-image: url(../../../img/weather.webp);
+}
+
+.card-3{
+    grid-area: market;
+    background-image: url(../../../img/market.webp);
+}
+
+.card-4{
+    grid-area: community;
+    background-image: url(../../../img/community.webp);
+}
+
+.txt__desc{
+    transition: height .3s ease-out;
+    height: 0;
+    overflow: hidden;
+    font-weight: var(--fw-regular);
+    font-size: var(--size-16);
+    max-width: 50ch;
+}
+
+.card:hover .txt__desc{
+    height: 60px;
+}
+
+.card:hover .txt{
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(13px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+
+
+@media (min-width: 1024px){
+    .grid-group-1{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+        "plant plant plant weather weather"
+        "market market community community community";
+    }
+    .third-section__title{
+        font-size: 90px;
+    }
+}
