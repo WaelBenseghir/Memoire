@@ -69,7 +69,7 @@ h2, .arrow{
 @media (min-width: 700px){
     .section__list{
         flex-direction: row;
-        gap: 0;
+        gap: .5rem;
     }
 
 
