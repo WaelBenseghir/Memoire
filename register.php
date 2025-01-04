@@ -17,7 +17,7 @@ if(isset($_POST['signUp'])){
         $insertQuery = "INSERT INTO user(name, email, password)
                         VALUES ('$name', '$email', '$password')";
             if($conn->query($insertQuery)==TRUE){
-                header("location:index.php");
+                header("location:index.html");
             }
             else{
                 echo "Error:".$conn->error;
@@ -35,7 +35,7 @@ if(isset($_POST['signIn'])){
         session_start();
         $row = $result->fetch_assoc();
         $_SESSION['email'] = $row['email'];
-        header("location:index.php");
+        header("location:index.html");
         exit();
     }
     else{
