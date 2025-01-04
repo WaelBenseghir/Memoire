@@ -18,7 +18,7 @@
         <nav class="header__nav-1">
             <ul class="nav__list-1">
                 <div>
-                    <li class="nav__item home"><a href="index.html" class="btn-home">Home</a></li>
+                    <li class="nav__item home"><a href="index.php" class="btn-home">Home</a></li>
                     <li class="nav__item"><a href="#Contact" class="btn ">Contact</a></li>
                     <li class="nav__item"><a href="#Community" class="btn ">Community</a></li>
                 </div>
@@ -30,13 +30,12 @@
         <nav class="header__nav">
             <ul class="nav__list">
                 <div>
-                    <li class="menu__item"><a href="index.html">Home</a></li>
+                    <li class="menu__item"><a href="index.php">Home</a></li>
                     <li class="menu__item"><a href="#Contact">Contact</a></li>
                     <li class="menu__item"><a href="#Community">Community</a></li>
                 </div>
                 <div>
-                    <li class="menu__item"><a href="setup.html">Sign up</a></li>
-                    <li class="menu__item"><a href="setup.html">Sign in</a></li>
+                    <li class="menu__item"><a href="logout.php">Logout</a></li>
                 </div>
             </ul>
             <svg class="logo menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
