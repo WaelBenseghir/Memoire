@@ -44,6 +44,10 @@
     margin-bottom: 1rem;
 }
 
+.grid-group-1 a{
+    border-radius: 16px;
+}
+
 .card-1{
     grid-area: plant;
     background-image: url(../../../img/plant4.webp);  

@@ -1,0 +1,39 @@
+@import "style.css";
+@import "utils.css";
+
+.first-section{
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.first-section h1{
+    font-size: var(--size-54);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1.5rem;
+}
+.first-section p{
+    font-size: var(--size-24);
+}
+
+@media (min-width: 900px){
+    
+    .first-section{
+        display: flex;
+        flex-direction: column;
+        text-align:left
+    }
+    h1{
+        width: 705px;
+        margin-top: -1rem;
+    }
+    .first-section p{
+        width: 506px;
+    }
+}
+
+@media (min-width: 1200px){
+    .first-section{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

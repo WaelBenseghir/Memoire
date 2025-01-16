@@ -9,10 +9,15 @@
     width: 100%;
 }
 
-p, a{
+p, a.btn{
     font-family: var(--ff-secondary);
 }
 
+button{
+    width: 100%;
+    padding: .5rem 0;
+    border-radius: 10px;
+}
 
 .btn {
     display: inline-block;
@@ -93,11 +98,7 @@ form button{
     font-size: var(--size-14);
     margin-top: 2rem;
 }
-button{
-    width: 100%;
-    padding: .5rem 0;
-    border-radius: 10px;
-}
+
 
 
 .arrow{
@@ -114,7 +115,6 @@ button{
 
 
 .card{
-
     padding: .5rem;
     border-radius: 16px;
     color: var(--clr-white);

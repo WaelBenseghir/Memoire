@@ -19,6 +19,10 @@ input, button, a{
     margin-inline: auto;
 }
 
+.main{
+    padding-bottom: .16rem;
+}
+
 h1{
     font-size: var(--size-32);
     margin-top: 4rem;

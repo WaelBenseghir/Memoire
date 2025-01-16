@@ -1,0 +1,13 @@
+@import "components/home/header.css";
+@import "components/diagnose/first-section.css";
+@import "components/diagnose/second-section.css";
+@import "style.css";
+@import "utils.css";
+
+.header, .nav__list, .header .btn{
+    background-color: var(--clr-white);
+}
+.btn-home:hover {
+    background-color: inherit;
+    color: var(--clr-green-900);
+}
