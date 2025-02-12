@@ -1,0 +1,28 @@
+@import "components/weather/header.css";
+@import "components/weather/first-section.css";
+@import "components/weather/second-section.css";
+@import "style.css";
+@import "utils.css";
+
+
+body{
+    background-color: var(--clr-white-100);
+}
+
+svg{
+    width: 11px;
+    height: 11px;
+    display: inline;
+}
+
+.container{
+    max-width: 1000px;
+}
+
+.btn{
+    background-color: inherit;
+    border: 1px solid black;
+    color: var(--clr-black);
+}
+
+

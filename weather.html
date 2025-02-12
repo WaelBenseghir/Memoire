@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/weather.css">
+    <title>Weather</title>
+</head>
+
+<body>
+    <header class="header container">
+        <nav class="nav">
+            <ul class="nav__list">
+                <div>
+                    <li class="nav__item"><a href="main.html" class="btn">Home</a></li>
+                    <li class="nav__item"><a href="logout.php" class="btn">Logout</a></li>
+                </div>
+                <div>
+                    <li class="nav__item">
+                        <svg class="location" xmlns="http://www.w3.org/2000/svg" width="800" height="800"
+                            viewBox="0 0 32 32">
+                            <path
+                                d="M16.114-.011C9.555-.011 4 5.576 4 12.193c0 6.93 6.439 14.017 10.77 18.998.017.02.717.797 1.579.797h.076c.863 0 1.558-.777 1.575-.797 4.064-4.672 10-12.377 10-18.998C28 5.575 23.667-.011 16.114-.011zm.401 29.86a1.211 1.211 0 0 1-.131.107 1.218 1.218 0 0 1-.133-.107l-.523-.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zm-.48-23.805a6 6 0 1 0 0 12 6 6 0 0 0 0-12zm0 10c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 .001 2.206-1.747 4.044-3.954 4.044z" />
+                        </svg>Annaba
+                    </li>
+                    <li class="nav__item">11.14.2024</li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main container">
+        <section class="first-section">
+            <div class="weather">
+                <h1>20<svg class="circle" xmlns="http://www.w3.org/2000/svg" width="800" height="800" fill="none"
+                        viewBox="0 0 12 12">
+                        <path fill="#3E3E3E" fill-rule="evenodd"
+                            d="M6 12A6 6 0 1 1 6 0a6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </h1>
+                <div>
+                    <h3>
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3 8H9.5C10.8807 8 12 6.88071 12 5.5C12 4.11929 10.8807 3 9.5 3C8.11929 3 7 4.11929 7 5.5V5.85714"
+                                stroke="#2A9D7E" stroke-width="1.5" stroke-linecap="round" />
+                            <path
+                                d="M4 14H18.5C20.433 14 22 15.567 22 17.5C22 19.433 20.433 21 18.5 21C16.567 21 15 19.433 15 17.5V17"
+                                stroke="#2A9D7E" stroke-width="1.5" stroke-linecap="round" />
+                            <path
+                                d="M2 11H18.5C20.433 11 22 9.433 22 7.5C22 5.567 20.433 4 18.5 4C16.567 4 15 5.567 15 7.5V8"
+                                stroke="#2A9D7E" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>3.2km/h
+                    </h3>
+                    <h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="#1B27B1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 13.385a4.676 4.676 0 0 1-1.318 3.263c-.479.492-1.055.861-1.682 1.088m6-4.044C19 7.115 12 2 12 2S5 7.115 5 13.692c0 1.938.737 3.797 2.05 5.168C8.363 20.23 10.144 21 12 21c1.857 0 3.637-.77 4.95-2.14 1.313-1.371 2.05-3.23 2.05-5.168Z" />
+                        </svg>85%
+                    </h3>
+                </div>
+            </div>
+            <h2 class="weather-desc">Cloudy</h2>
+        </section>
+
+        <section class="second-section">
+            <div class="flex-group">
+                <div class="weather-card">
+                    <h4>Today</h4>
+                    <h5>20<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" fill="none" viewBox="0 0 12 12">
+                            <path fill="#3E3E3E" fill-rule="evenodd"
+                                d="M6 12A6 6 0 1 1 6 0a6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" clip-rule="evenodd" />
+                        </svg></h5>
+                    <p>Cloudy</p>
+                </div>
+                <div class="weather-card">
+                    <h4>Today</h4>
+                    <h5>20<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" fill="none"
+                            viewBox="0 0 12 12">
+                            <path fill="#3E3E3E" fill-rule="evenodd"
+                                d="M6 12A6 6 0 1 1 6 0a6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
+                                clip-rule="evenodd" />
+                        </svg></h5>
+                    <p>Cloudy</p>
+                </div>
+                <div class="weather-card">
+                    <h4>Today</h4>
+                    <h5>20<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" fill="none"
+                            viewBox="0 0 12 12">
+                            <path fill="#3E3E3E" fill-rule="evenodd"
+                                d="M6 12A6 6 0 1 1 6 0a6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
+                                clip-rule="evenodd" />
+                        </svg></h5>
+                    <p>Cloudy</p>
+                </div>
+                <div class="weather-card">
+                    <h4>Today</h4>
+                    <h5>20<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" fill="none"
+                            viewBox="0 0 12 12">
+                            <path fill="#3E3E3E" fill-rule="evenodd"
+                                d="M6 12A6 6 0 1 1 6 0a6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
+                                clip-rule="evenodd" />
+                        </svg></h5>
+                    <p>Cloudy</p>
+                </div>
+                <div class="weather-card">
+                    <h4>Today</h4>
+                    <h5>20<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" fill="none"
+                            viewBox="0 0 12 12">
+                            <path fill="#3E3E3E" fill-rule="evenodd"
+                                d="M6 12A6 6 0 1 1 6 0a6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
+                                clip-rule="evenodd" />
+                        </svg></h5>
+                    <p>Cloudy</p>
+                </div>
+                <div class="weather-card">
+                    <h4>Today</h4>
+                    <h5>20<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" fill="none"
+                            viewBox="0 0 12 12">
+                            <path fill="#3E3E3E" fill-rule="evenodd"
+                                d="M6 12A6 6 0 1 1 6 0a6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
+                                clip-rule="evenodd" />
+                        </svg></h5>
+                    <p>Cloudy</p>
+                </div>
+                <div class="weather-card">
+                    <h4>Today</h4>
+                    <h5>20<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" fill="none"
+                            viewBox="0 0 12 12">
+                            <path fill="#3E3E3E" fill-rule="evenodd"
+                                d="M6 12A6 6 0 1 1 6 0a6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
+                                clip-rule="evenodd" />
+                        </svg></h5>
+                    <p>Cloudy</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
