@@ -1,7 +1,7 @@
-@import "components/home/header.css";
-@import "components/Plant-base/first-section.css";
-@import "components/Plant-base/second-section.css";
-@import "components/home/footer.css";
+@import "./components/home/header.css";
+@import "./components/Plant-base/first-section.css";
+@import "./components/Plant-base/second-section.css";
+@import "./components/home/footer.css";
 @import "style.css";
 @import "utils.css";
 
