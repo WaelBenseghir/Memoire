@@ -1,0 +1,66 @@
+@import "../style.css";
+@import "../utils.css";
+
+
+
+h1{
+    font-size: var(--size-200);
+    font-weight: var(--fw-medium);
+    color: var(--clr-grey-900);
+    text-align: center;
+    position: relative;
+}
+
+h1 .circle{
+    position: absolute;
+    top: 3.5rem;
+    width: 45px;
+    height: 45px;
+}
+
+h3{
+    width: 160px;
+    color: var(--clr-grey-900);
+    font-size: var(--size-28);
+    font-weight: var(--fw-medium);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
+h3 svg{
+    width: 45px;
+    height: 45px;
+}
+
+.weather div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.weather-desc{
+    color: var(--clr-grey-900);
+    font-size: var(--size-54);
+    font-weight: var(--fw-medium);
+    text-align: center;
+}
+
+@media (min-width: 600px){
+    h1{
+        font-size: 250px;
+    }
+
+    .weather{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding-left: 12rem;
+    }
+    .weather div{
+        margin-top: 6rem;
+    }
+}

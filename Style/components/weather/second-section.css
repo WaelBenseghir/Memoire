@@ -1,0 +1,54 @@
+@import "../style.css";
+@import "../utils.css";
+
+
+
+.flex-group{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-bottom: 1.25rem;
+}
+
+.weather-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    border: 1px solid var(--clr-grey-900);
+    border-radius: 20px;
+    height: 147px;
+    min-width: 125px;
+
+}
+
+h4{
+    font-size: 1.25rem;
+    font-weight: var(--fw-medium);
+    color: var(--clr-black);
+}
+
+h5{
+    position: relative;
+    font-weight: var(--fw-medium);
+    font-size: var(--size-28);
+}
+
+h5 svg{
+    position: absolute;
+}
+
+.weather-card p{
+    font-size: 1.25rem;
+    color: var(--clr-grey-900);
+}
+
+@media (min-width: 600px){
+    .flex-group{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+

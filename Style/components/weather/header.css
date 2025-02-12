@@ -1,0 +1,47 @@
+@import "../style.css";
+@import "../utils.css";
+
+.header{
+    padding-top: 1.5rem;
+}
+
+
+.btn{
+    background-color: inherit;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    transition: .3s;
+}
+
+
+
+.btn:hover{
+    opacity: .9;
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.nav__list div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav__list div li{
+    font-size: var(--size-24);
+}
+
+.location{
+    height: 25px;
+    width: 25px;
+}
+
+@media (min-width: 600px){
+
+}
