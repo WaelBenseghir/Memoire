@@ -85,6 +85,10 @@
     height: 300px;
     border-radius: 50%;
     margin-inline: auto;
+    background-image: url(../../../img/lemon.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 label{
