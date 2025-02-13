@@ -19,7 +19,7 @@ h1 .circle{
 }
 
 h3{
-    width: 160px;
+    width: 180px;
     color: var(--clr-grey-900);
     font-size: var(--size-28);
     font-weight: var(--fw-medium);
@@ -30,8 +30,8 @@ h3{
 }
 
 h3 svg{
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
 }
 
 .weather div{
@@ -48,6 +48,8 @@ h3 svg{
     text-align: center;
 }
 
+
+
 @media (min-width: 600px){
     h1{
         font-size: 250px;
@@ -58,9 +60,15 @@ h3 svg{
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        padding-left: 12rem;
+        padding-left: 4rem;
     }
     .weather div{
         margin-top: 6rem;
+    }
+}
+
+@media (min-width: 900px){
+    .weather{
+        padding-left: 12rem;
     }
 }

@@ -1,10 +1,14 @@
 @import "../style.css";
 @import "../utils.css";
 
+
 .header{
     padding-top: 1.5rem;
 }
 
+.container{
+    max-width: 980px;
+}
 
 .btn{
     background-color: inherit;
@@ -14,27 +18,37 @@
     transition: .3s;
 }
 
-
-
 .btn:hover{
     opacity: .9;
 }
 
-.nav__list{
+.nav__list div:first-child{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    margin-bottom: 1rem;
     gap: 1.5rem;
 }
 
-.nav__list div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+.nav__list div li, .nav__list2 div li{
+    font-size: var(--size-24);
 }
 
 
-.nav__list div li{
-    font-size: var(--size-24);
+.search{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+.search__result{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    margin-inline: auto;
 }
 
 .location{
@@ -42,6 +56,79 @@
     width: 25px;
 }
 
-@media (min-width: 600px){
+.main__search{
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    margin-inline: auto;
+}
 
+.search-button{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+.search-logo{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    width: 25px;
+    height: 25px;
+}
+
+
+.search-input{
+    outline: none;
+    background-color: var(--clr-grey-100);
+    border: 2px solid var(--clr-grey-900);
+    font-family: var(--ff-secondary);
+    outline: none;
+    text-align: center;
+    border-radius: 16px;
+    padding: 15px 103px 15px 38px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 350px;
+}
+
+.search-input::placeholder{
+    color: var(--clr-grey-900);
+    font-weight: var(--fw-medium);
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+@media (min-width: 650px){
+    .buttons{
+        justify-content: end;
+        gap: .5rem;
+    }
+    .nav__list div:first-child{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .search__result{
+        margin-inline: 0;
+    }
+
+    .first{
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+
+    .main__search{
+        margin-inline: 0;
+    }
 }

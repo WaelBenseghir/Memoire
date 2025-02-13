@@ -15,14 +15,31 @@ svg{
     display: inline;
 }
 
-.container{
-    max-width: 1000px;
-}
 
 .btn{
     background-color: inherit;
     border: 1px solid black;
     color: var(--clr-black);
 }
+
+.search-city, .search-city-not-found{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: -1rem !important;
+    text-align: center;
+}
+
+.search-img{
+    height: 350px;
+    width: fit-content;
+}
+
+.search-city__desc{
+    font-size: var(--size-32);
+}
+
+
 
 
