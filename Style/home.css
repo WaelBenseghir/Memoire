@@ -7,8 +7,3 @@
 @import "components/home/footer.css";
 @import "style.css";
 @import "utils.css";
-
-
-*{
-    border: 1px solid red;
-}
