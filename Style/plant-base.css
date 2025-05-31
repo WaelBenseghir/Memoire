@@ -1,8 +1,8 @@
 @import "components/home/header.css";
-@import "components/Plant-base/first-section.css";
-@import "components/Plant-base/second-section.css";
-@import "components/Plant-base/addPlant.css";
-@import "components/Plant-base/modal.css";
+@import "components/PlantBase/first-section.css";
+@import "components/PlantBase/second-section.css";
+@import "components/PlantBase/addPlant.css";
+@import "components/PlantBase/modal.css";
 @import "components/home/footer.css";
 @import "style.css";
 @import "utils.css";
@@ -21,7 +21,6 @@ section, .categories, .featured, .filter {
     background-color: var(--clr-white);
 }
 
-/* Plant Card Styling */
 .plant-card, .plant-card-html {
     padding: 2rem 1.25rem;
     display: flex;
