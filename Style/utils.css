@@ -9,12 +9,11 @@
     width: 100%;
 }
 
-p, a.btn{
+p, a.btn, .list__button, pre{
     font-family: var(--ff-secondary);
 }
 
 button{
-    width: 100%;
     padding: .5rem 0;
     border-radius: 10px;
 }
@@ -96,7 +95,6 @@ form button{
     border: 1px solid var(--clr-green-900);
     color: var(--clr-green-100);
     font-size: var(--size-14);
-    margin-top: 2rem;
 }
 
 

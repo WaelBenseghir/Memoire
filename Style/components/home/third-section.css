@@ -50,22 +50,34 @@
 
 .card-1{
     grid-area: plant;
-    background-image: url(../../../img/plant4.webp);  
+    background-image: url(../../../img/plant4.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 .card-2{
     grid-area: weather;
     background-image: url(../../../img/weather.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .card-3{
     grid-area: market;
-    background-image: url(../../../img/market.webp);
+    background-image: url(../../../img/community.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .card-4{
     grid-area: community;
-    background-image: url(../../../img/community.webp);
+    background-image: url(../../../img/catalog.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .txt__desc{

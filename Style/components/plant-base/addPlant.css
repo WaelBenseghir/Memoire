@@ -1,0 +1,154 @@
+@import "../style.css";
+@import "../utils.css";
+
+
+/* General Styling */
+.sub-menu {
+    width: 100%;
+    max-width: 580px;
+    border-radius: 16px;
+    background-color: white;
+    transition: 0.3s height;
+    place-items: center;
+    margin-inline: auto;
+    position: relative;
+    z-index: 10;
+    height: 0px;
+    overflow: hidden;
+}
+
+
+
+.sub-menu form {
+    display: grid;
+    grid-template-areas: 
+        "div1"
+        "div2"
+        "buttons";
+}
+
+/* Form Divs */
+.form-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-div:nth-child(1) { grid-area: div1; align-items: start; }
+.form-div:nth-child(2) { grid-area: div2; align-items: end; }
+
+
+
+/* Input & Select Styles */
+.sub-menu form input,
+.sub-menu form select,
+.sub-menu form textarea {
+    width: 250px;
+    border-radius: 4px;
+    border: 1px solid var(--clr-green-900);
+    outline: none;
+    font-family: var(--ff-primary);
+}
+
+
+
+
+.sub-menu form input,
+.sub-menu form select {
+    height: 30px;
+}
+
+.sub-menu form textarea {
+    height: 60px;
+}
+
+/* Placeholder Styling */
+.sub-menu form input::placeholder, 
+.sub-menu form textarea::placeholder {
+    padding-left: 0.2rem;
+}
+
+/* Buttons */
+.sub-menu button,
+.sub-menu-label {
+    background-color: var(--clr-green-900);
+    color: var(--clr-white);
+    border: 1px solid var(--clr-green-900);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: var(--fw-regular);
+    padding: 0.5rem 1rem;
+    width: 250px;
+}
+
+.sub-menu-label {
+    height: 40px;
+    cursor: pointer;
+}
+
+
+/* File Input (Hidden) */
+input[type="file"] {
+    display: none;
+}
+
+
+.cta-buttons {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: buttons;
+}
+
+.sub-menu.open{
+    height: fit-content;
+    border: 1px solid var(--clr-green-900);
+    padding: 1.5rem;
+}
+
+.sub-menu.close{
+    height: 0px;
+    border: none;
+    padding: 0rem;
+}
+
+form button{
+    margin-top: 0rem;
+}
+
+button[type="submit"]{
+    background-color: var(--clr-green-900);
+    padding: .5rem 0;
+    width: 100%;
+    transition: .3s;
+    border-radius: 4px;
+    width: 250px;
+}
+
+button[type="submit"]:hover{
+    background-color: inherit;
+    color: var(--clr-green-900);
+}
+
+@media (min-width: 850px) {
+
+    .sub-menu {
+        position: absolute;
+        top: 5rem;
+        right: 225px;
+        margin-inline: 0;
+        place-items:initial;
+    }
+    .sub-menu form {
+        display: grid;
+        grid-template-areas: 
+        "div1 div2" 
+        "div1 div2" 
+        "buttons buttons";
+    }
+
+    .cta-buttons { flex-direction: row; }
+}
+
+

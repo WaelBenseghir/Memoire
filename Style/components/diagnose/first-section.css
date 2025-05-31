@@ -20,7 +20,7 @@
     .first-section{
         display: flex;
         flex-direction: column;
-        text-align:left
+        text-align:left;
     }
     h1{
         width: 705px;

@@ -41,6 +41,9 @@ h3 svg{
     justify-items: center;
 }
 
+
+
+
 .weather-desc{
     color: var(--clr-grey-900);
     font-size: var(--size-54);
@@ -48,7 +51,30 @@ h3 svg{
     text-align: center;
 }
 
+.farmingTips{
+    text-align: center;
+    margin-top: 2rem;
+    font-family: var(--ff-secondary);
+    color: var(--clr-black);
+    font-size: 1.5rem;
+    position: relative;
+    width: fit-content;
+    margin-inline: auto;
+}
 
+.farmingTips::before{
+    content: "\"";
+    position: absolute;
+    left: -10px;
+    top: -2px;
+}
+
+.farmingTips::after{
+    content: "\"";
+    position: absolute;
+    right: -10px;
+    top: -2px;
+}
 
 @media (min-width: 600px){
     h1{
@@ -66,6 +92,8 @@ h3 svg{
         margin-top: 6rem;
     }
 }
+
+
 
 @media (min-width: 900px){
     .weather{

@@ -1,0 +1,79 @@
+@import "../style.css";
+@import "../utils.css";
+
+.first-section{
+    text-align: center;
+}
+
+h1{
+    font-size: var(--size-54);
+    font-weight: var(--fw-bold);
+}
+
+.first-section__desc{
+    font-size: var(--size-24);
+    font-weight: var(--fw-medium);
+    margin-top: var(--size-24);
+    margin-bottom: var(--size-24);
+    max-width: 595px;
+    margin-inline: auto;
+}
+
+.first-section a{
+    color: var(--clr-black);
+    font-size: var(--size-24);
+    font-weight: var(--fw-medium);
+    text-decoration: underline;
+    display: flex;
+    margin-inline: auto;
+    justify-content: center;
+    width: fit-content;
+    text-align: center;
+}
+
+a svg{
+    height: 30px;
+    width: 30px;
+    display: inline;
+    margin-top: .3rem;
+}
+
+
+
+
+@media (min-width: 850px){
+    .first-section div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+
+
+    .first-section__desc{
+        margin-inline: 0;
+    }
+
+    .first-section a{
+        justify-content: start;
+        margin-inline: 0;
+    }
+}
+
+@media (min-width: 1280px){
+    .first-section div{
+        flex-direction: row;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    .first-section a{
+        margin-top: 2rem;
+        
+    }
+
+    .first-section__desc {
+        width: 462px;
+    }
+}

@@ -1,0 +1,90 @@
+@import "components/home/header.css";
+@import "components/Plant-base/first-section.css";
+@import "components/Plant-base/second-section.css";
+@import "components/Plant-base/addPlant.css";
+@import "components/Plant-base/modal.css";
+@import "components/home/footer.css";
+@import "style.css";
+@import "utils.css";
+
+
+
+
+/* General Styles */
+.btn-home:hover {
+    background-color: transparent;
+}
+
+section, .categories, .featured, .filter {
+    margin-top: 100px;
+}
+
+.header, .nav__list, .header .btn {
+    background-color: var(--clr-white);
+}
+
+/* Plant Card Styling */
+.plant-card, .plant-card-html {
+    padding: 2rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+.plant-card::after, .plant-card-html::after {
+    content: '';
+    border-radius: inherit;
+    position: absolute;
+    inset: 0;
+    background-color: var(--clr-black);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.plantTitle, .plantDesc, .plantCat, .plantCat p {
+    color: var(--clr-white);
+    position: relative;
+    z-index: 2;
+}
+
+.plantTitle {
+    font-size: var(--size-44);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2rem;
+    max-width: 305px;
+}
+
+.plantDesc {
+    font-size: var(--size-16);
+    font-weight: var(--fw-medium);
+    max-width: 305px;
+}
+
+.plantCat {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--clr-white);
+}
+
+.plantCat p {
+    font-weight: var(--fw-medium);
+    padding: 0.5rem 0.7rem;
+    border-radius: 60px;
+    width: fit-content;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+
+
+
+
+@media(min-width: 850px){
+    .add-plant-visible{
+        display: none;
+    }
+}
+
+

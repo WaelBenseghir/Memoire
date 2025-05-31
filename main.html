@@ -20,7 +20,7 @@
                 <div>
                     <li class="nav__item home"><a href="main.html" class="btn-home">Home</a></li>
                     <li class="nav__item"><a href="mailto:waelcoding12@gmail.com" class="btn ">Contact</a></li>
-                    <li class="nav__item"><a href="#Community" class="btn ">Community</a></li>
+                    <li class="nav__item"><a href="https://www.reddit.com/r/farming/" target="_blank" class="btn ">Community</a></li>
                 </div>
                 <div>
                     <li class="nav__item"><a href="logout.php" class="btn">Logout</a></li>
@@ -32,7 +32,7 @@
                 <div>
                     <li class="menu__item"><a href="main.html">Home</a></li>
                     <li class="menu__item"><a href="mailto:waelcoding12@gmail.com">Contact</a></li>
-                    <li class="menu__item"><a href="#Community">Community</a></li>
+                    <li class="menu__item"><a href="https://www.reddit.com/r/farming/" target="_blank" >Community</a></li>
                 </div>
                 <div>
                     <li class="menu__item"><a href="index.html">Logout</a></li>
@@ -77,7 +77,7 @@
                     </div>
                     <a href="plant-base.html" class="explore">Explore</a>
                 </div>
-                <a href="#marketplace" class="btn-home cta-btn">Visit marketplace</a>
+                <a href="weather.html" class="btn-home cta-btn">Check Weather</a>
             </div>
         </section>
 
@@ -99,40 +99,58 @@
         <section class="second-section container">
             <nav class="section__nav">
                 <ul class="section__list">
-                    <li class="section__item"><a href="#">Fruit and vegetables</a></li>
-                    <li class="section__item"><a href="#">Flowering Plants</a></li>
-                    <li class="section__item"><a href="#">Herbs</a></li>
-                    <li class="section__item last__item"><a href="plant-base.html">View More</a></li>
+                    <li class="section__item"><button class="list__button" data-target="vegetables">Fruit and
+                            vegetables</button></li>
+                    <li class="section__item"><button class="list__button" data-target="flowers">Flowering
+                            Plants</button></li>
+                    <li class="section__item"><button class="list__button" data-target="herbs">Herbs</button></li>
+                    <li class="section__item last__item"><a href="plant-base.html" class="list__button">View More</a>
+                    </li>
                 </ul>
             </nav>
 
-            <div class="flex-group">
-
-                <div class="card flex-item-1">
-                    <h2 class="text">Lemons</h2>
-                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd"
-                            d="M12.293 4.293a1 1 0 0 1 1.414 0l7 7a1 1 0 0 1 0 1.414l-7 7a1 1 0 0 1-1.414-1.414L17.586 13H4a1 1 0 1 1 0-2h13.586l-5.293-5.293a1 1 0 0 1 0-1.414Z"
-                            clip-rule="evenodd" />
-                    </svg>
+            <div class="flex-group" id="vegetables">
+                <div class="card flex-item-1 plant-card" data-category="Fruits & Vegetables"
+                    style="background-image: url(uploads/onion.webp);">
+                    <h2 class="text">Onion</h2>
                 </div>
 
-                <div class="card flex-item-2">
+                <div class="card flex-item-2 plant-card" data-category="Fruits & Vegetables"
+                    style="background-image: url(uploads/tomato.webp);">
                     <h2 class="text">Tomato</h2>
-                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd"
-                            d="M12.293 4.293a1 1 0 0 1 1.414 0l7 7a1 1 0 0 1 0 1.414l-7 7a1 1 0 0 1-1.414-1.414L17.586 13H4a1 1 0 1 1 0-2h13.586l-5.293-5.293a1 1 0 0 1 0-1.414Z"
-                            clip-rule="evenodd" />
-                    </svg>
                 </div>
 
-                <div class="card flex-item-3">
-                    <h2 class="text">Cabbage</h2>
-                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd"
-                            d="M12.293 4.293a1 1 0 0 1 1.414 0l7 7a1 1 0 0 1 0 1.414l-7 7a1 1 0 0 1-1.414-1.414L17.586 13H4a1 1 0 1 1 0-2h13.586l-5.293-5.293a1 1 0 0 1 0-1.414Z"
-                            clip-rule="evenodd" />
-                    </svg>
+                <div class="card flex-item-3 plant-card" data-category="Fruits & Vegetables"
+                    style="background-image: url(uploads/carrots.webp);">
+                    <h2 class="text">Carrots</h2>
+                </div>
+            </div>
+
+            <div class="flex-group" id="flowers">
+                <div class="card flex-item-2 plant-card" data-category="flowers" style="background-image: url(uploads/Orchid.webp);">
+                    <h2 class="text">Orchid</h2>
+                </div>
+
+                <div class="card flex-item-1 plant-card" data-category="flowers" style="background-image: url(uploads/jasmin.webp);">
+                    <h2 class="text">Jasmin</h2>
+                </div>
+
+                <div class="card flex-item-3 plant-card" data-category="flowers" style="background-image: url(uploads/peony.webp);">
+                    <h2 class="text">Peony</h2>
+                </div>
+            </div>
+
+            <div class="flex-group" id="herbs">
+                <div class="card flex-item-3 plant-card" data-category="herbs" style="background-image: url(uploads/oregano.webp);">
+                    <h2 class="text">Oregano</h2>
+                </div>
+
+                <div class="card flex-item-1 plant-card" data-category="herbs" style="background-image: url(uploads/basil.webp);">
+                    <h2 class="text">Basil</h2>
+                </div>
+
+                <div class="card flex-item-2 plant-card" data-category="herbs" style="background-image: url(uploads/cilantro.webp);">
+                    <h2 class="text">Cilantro</h2>
                 </div>
             </div>
         </section>
@@ -175,7 +193,7 @@
                     </div>
                 </a>
 
-                <a href="#market" class="card-3">
+                <a href="https://www.reddit.com/r/farming/" target="_blank" class="card-3">
                     <div class="card-3 card">
                         <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="800" height="800"
                             viewBox="0 0 24 24">
@@ -185,15 +203,13 @@
                         </svg>
 
                         <div class="txt">
-                            <h3>Marketplace</h3>
-                            <p class="txt__desc">Discover high-quality products and connect with local sellers to
-                                simplify
-                                agricultural trading processes.</p>
+                            <h3>Community</h3>
+                            <p class="txt__desc">Join discussions with farmers, share advice, and learn valuable strategies to improve your practices.</p>
                         </div>
                     </div>
                 </a>
 
-                <a href="#community" class="card-4">
+                <a href="plant-base.html" class="card-4">
                     <div class="card-4 card">
                         <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="800" height="800"
                             viewBox="0 0 24 24">
@@ -203,10 +219,8 @@
                         </svg>
 
                         <div class="txt">
-                            <h3>Community</h3>
-                            <p class="txt__desc">Join discussions with farmers, share advice, and learn valuable
-                                strategies
-                                to improve your practices.</p>
+                            <h3>Plant Catalog</h3>
+                            <p class="txt__desc">Explore a diverse collection of plants with detailed growing guides, ideal conditions, and care tips for every species.</p>
                         </div>
                     </div>
                 </a>
@@ -227,14 +241,13 @@
                 <div>
                     <li><a href="main.html">Home</a></li>
                     <li><a href="mailto:waelcoding12@gmail.com">Support</a></li>
-                    <li><a href="#Community">Community</a></li>
+                    <li><a href="https://www.reddit.com/r/farming/" target="_blank" >Community</a></li>
                 </div>
                 <div>
                     <li><a href="diagnose.html">Plant Diagnosis</a></li>
-                    <li><a href="#Marketplace">Marketplace</a></li>
+                    <li><a href="plant-base.html">Plants Database</a></li>
                     <li><a href="weather.html">Weather</a></li>
-                </div>
-                <li><a href="plant-base.html">Plants Database</a></li>
+                </div> 
             </ul>
         </nav>
         <div>
@@ -268,6 +281,7 @@
         </div>
     </footer>
     <script src="Src/menu.js"></script>
+    <script src="Src/test.js"></script>
 </body>
 
 </html>

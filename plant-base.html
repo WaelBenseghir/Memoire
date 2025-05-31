@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style/plantBase.css">
+    <link rel="stylesheet" href="Style/plant-base.css">
     <title>Plant DataBase</title>
 </head>
 
@@ -19,20 +19,102 @@
             <ul class="nav__list-1">
                 <div>
                     <li class="nav__item home"><a href="main.html" class="btn-home">Home</a></li>
-                    <li class="nav__item"><a href="mailto:waelcoding12@gmail.com" class="btn ">Contact</a></li>
-                    <li class="nav__item"><a href="#Community" class="btn ">Community</a></li>
+                    <li class="nav__item"><a href="mailto:waelcoding12@gmail.com" class="btn">Contact</a></li>
+                    <li class="nav__item"><a href="https://www.reddit.com/r/farming/" target="_blank"
+                            class="btn">Community</a></li>
                 </div>
                 <div>
                     <li class="nav__item"><a href="logout.php" class="btn">Logout</a></li>
                 </div>
             </ul>
+            <div class="sub-menu">
+                <form id="addPlantForm" action="addPlant.html" method="POST" enctype="multipart/form-data">
+                    <div class="form-div">
+                        <input type="text" name="name" placeholder="Plant Name" required><br>
+                        <textarea name="description" placeholder="Plant Description" required></textarea><br>
+                        <select name="category" required>
+                            <option value="" disabled selected>Category</option>
+                            <option value="Fruits & Vegetables">Fruits & Vegetables</option>
+                            <option value="Herbs">Herbs</option>
+                            <option value="Trees & Shrubs">Trees & Shrubs</option>
+                            <option value="Flowering Plants">Flowering Plants</option>
+                            <option value="Indoor Plants">Indoor Plants</option>
+                        </select><br>
+
+                        <select id="sunlight" name="sunlight" required>
+                            <option value="" disabled selected>Sunlight requirement</option>
+                            <option value="full-sun">Full sun (6-8 hours daily)</option>
+                            <option value="partial-sun">Partial sun (4-6 hours daily)</option>
+                            <option value="shade">Shade (less than 4 hours daily)</option>
+                            <option value="full-sun-partial-sun">Full sun to partial sun</option>
+                        </select><br>
+
+                        <select id="maturity" name="maturity" required>
+                            <option value="" disabled selected>Select time to maturity</option>
+                            <option value="30-60 days">30-60 days</option>
+                            <option value="60-90 days">60-90 days</option>
+                            <option value="90-120 days">90-120 days</option>
+                            <option value="120+ days">120+ days</option>
+                            <option value="6-12 months">6-12 months</option>
+                            <option value="1-2 years">1-2 years</option>
+                            <option value="2-3 years">2-3 years</option>
+                            <option value="3-5 years">3-5 years</option>
+                            <option value="5-10 years">5-10 years</option>
+                            <option value="10+ years">10+ years</option>
+                        </select><br>
+
+                        <select id="watering" name="watering" required>
+                            <option value="" disabled selected>Watering Needs</option>
+                            <option value="low">Low (Let soil dry out between waterings)</option>
+                            <option value="moderate">Moderate (Keep soil moist but not soggy)</option>
+                            <option value="high">High (Keep soil consistently wet)</option>
+                        </select><br>
+
+                        <select id="soilType" name="soilType" required>
+                            <option value="" disabled selected>Select soil type</option>
+                            <option value="Loamy">Loamy</option>
+                            <option value="Sandy">Sandy</option>
+                            <option value="Clay">Clay</option>
+                            <option value="Peaty">Peaty</option>
+                            <option value="Chalky">Chalky</option>
+                            <option value="Silty">Silty</option>
+                            <option value="Rocky">Rocky</option>
+                            <option value="Well-drained">Well-drained</option>
+                        </select><br>
+                    </div>
+
+
+
+                    <div class="form-div">
+                        <textarea id="problems" name="problems" rows="4"
+                            placeholder="Common Problems & Solutions: e.g., Yellow leaves? Overwatering. Reduce frequency."
+                            required></textarea><br>
+                        <textarea id="uses" name="uses" rows="3" placeholder="Uses: e.g., Salads, sauces, soups, juices"
+                            required></textarea><br>
+                        <input type="text" id="temperature" name="temperature"
+                            placeholder="Optimal Temperature (°C): e.g., 18-25°C" required><br>
+                        <textarea id="pests" name="pests" rows="3"
+                            placeholder="Pests & Diseases:  e.g., Aphids, Tomato Hornworms, Blight, Powdery Mildew"
+                            required></textarea><br>
+                        <input type="text" id="soilPH" name="soilPH" placeholder="Soil pH: e.g., 6.0-6.8" required><br>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <label for="choose-file" class="sub-menu-label">Choose File</label>
+                        <input type="file" id="choose-file" name="image" accept="image/*" required><br>
+                        <button type="submit">Add Plant</button>
+                    </div>
+                </form>
+            </div>
+            </div>
         </nav>
         <nav class="header__nav">
             <ul class="nav__list">
                 <div>
                     <li class="menu__item"><a href="main.html">Home</a></li>
                     <li class="menu__item"><a href="mailto:waelcoding12@gmail.com">Contact</a></li>
-                    <li class="menu__item"><a href="#Community">Community</a></li>
+                    <li class="menu__item"><a href="https://www.reddit.com/r/farming/" target="_blank">Community</a>
+                    </li>
                 </div>
                 <div>
                     <li class="menu__item"><a href="index.html">Logout</a></li>
@@ -45,43 +127,126 @@
         </nav>
     </header>
 
+
     <main class="main container">
         <section class="first-section">
             <div>
                 <h1>Grow Your Knowledge,<br>Grow Your Plants</h1>
-                <p class="first-section__desc">Discover plant care tips and expert advice to help every plant in your garden thrive. Dive in, learn more, and watch
-                your greenery flourish beautifully today!</p>
+                <p class="first-section__desc">Discover plant care tips and expert advice to help every plant in your
+                    garden thrive. Dive in, learn more, and watch
+                    your greenery flourish beautifully today!</p>
             </div>
-            <a href="main.html">Go to home<svg fill="#000000" width="64px" height="64px" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <path
-                        d="M 13.8320 43.5625 C 14.4883 43.5625 14.9336 43.3516 15.4258 43.1172 L 41.7695 31.2813 C 43.1055 30.6484 44.1602 29.6172 44.1602 28.1172 C 44.1602 26.6406 43.1289 25.5625 41.7461 24.9532 L 15.4258 12.8359 C 14.9570 12.6016 14.5351 12.4375 13.9258 12.4375 C 12.7070 12.4375 11.8398 13.2813 11.8398 14.5235 C 11.8398 15.6016 12.4023 16.2110 13.3867 16.6797 L 38.6055 27.8125 L 38.6055 28.0703 L 13.3867 39.2969 C 12.4023 39.7656 11.8398 40.3750 11.8398 41.4531 C 11.8398 42.7422 12.6836 43.5625 13.8320 43.5625 Z">
-                    </path>
-                </g>
-            </svg></a>
+            <a href="main.html">Go to home<svg fill="#000000" width="64px" height="64px" viewBox="0 0 56 56"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M 13.8320 43.5625 C 14.4883 43.5625 14.9336 43.3516 15.4258 43.1172 L 41.7695 31.2813 C 43.1055 30.6484 44.1602 29.6172 44.1602 28.1172 C 44.1602 26.6406 43.1289 25.5625 41.7461 24.9532 L 15.4258 12.8359 C 14.9570 12.6016 14.5351 12.4375 13.9258 12.4375 C 12.7070 12.4375 11.8398 13.2813 11.8398 14.5235 C 11.8398 15.6016 12.4023 16.2110 13.3867 16.6797 L 38.6055 27.8125 L 38.6055 28.0703 L 13.3867 39.2969 C 12.4023 39.7656 11.8398 40.3750 11.8398 41.4531 C 11.8398 42.7422 12.6836 43.5625 13.8320 43.5625 Z">
+                        </path>
+                    </g>
+                </svg></a>
         </section>
+
+
+
         <section class="second-section">
             <div class="categories">
                 <h2>POPULAR CATEGORIES</h2>
                 <div class="grid-group">
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
+                    <div class="plant-card-html"
+                        style="background-image: url('./uploads/cucumber.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; ">
+                        <h3 class="plantTitle">Friuts & Vegetables</h3>
+                    </div>
+                    <div class="plant-card-html"
+                        style="background-image: url('./uploads/cherryBlossom.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; ">
+                        <h3 class="plantTitle">Trees & Shrubs</h3>
+                    </div>
+                    <div class="plant-card-html"
+                        style="background-image: url('./uploads/orchid.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; ">
+                        <h3 class="plantTitle">Flowering Plants</h3>
+                    </div>
+                    <div class="plant-card-html"
+                        style="background-image: url('./uploads/FiddleFig.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; ">
+                        <h3 class="plantTitle">Indoor Plants</h3>
+                    </div>
                 </div>
             </div>
 
             <div class="featured">
                 <h2>Featured Plants</h2>
                 <div class="grid-group">
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
+                    <div class="plant-card-html"
+                        style="background-image: url('./uploads/pine.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; ">
+                        <div>
+                            <h3 class="plantTitle">Pine</h3>
+                            <p class="plantDesc">An evergreen tree with needle-like leaves, valued for its timber,
+                                scent, and year-round greenery.</p>
+                        </div>
+                        <div class="plantCat">
+                            <p>Trees & Shrubs</p>
+                        </div>
+                    </div>
+
+                    <div class="plant-card-html"
+                        style="background-image: url('./uploads/spinach.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; ">
+                        <div>
+                            <h3 class="plantTitle">Spinach</h3>
+                            <p class="plantDesc">Spinach is a nutrient-rich leafy green, perfect for salads, cooking,
+                                smoothies, and healthy meals.</p>
+                        </div>
+                        <div class="plantCat">
+                            <p>Fruits & Vegetables</p>
+                        </div>
+                    </div>
+
+                    <div class="plant-card-html"
+                        style="background-image: url('./uploads/Hibiscus.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; ">
+                        <div>
+                            <h3 class="plantTitle">Hibiscus</h3>
+                            <p class="plantDesc">A tropical flowering plant with large, vibrant blooms, widely used for
+                                tea and medicinal purposes.</p>
+                        </div>
+                        <div class="plantCat">
+                            <p>Flowering Plants</p>
+                        </div>
+                    </div>
+
+                    <div class="plant-card-html"
+                        style="background-image: url('./uploads/JadePlant.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; ">
+                        <div>
+                            <h3 class="plantTitle">Jade Plant</h3>
+                            <p class="plantDesc">A hardy succulent with thick, fleshy leaves that stores water and is
+                                easy to care for.</p>
+                        </div>
+                        <div class="plantCat">
+                            <p>Indoor Plants</p>
+                        </div>
+                    </div>
+
+                    <div class="plant-card-html"
+                        style="background-image: url('./uploads/Oregano.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; ">
+                        <div>
+                            <h3 class="plantTitle">Oregano</h3>
+                            <p class="plantDesc">Oregano is a flavorful herb, commonly used in pizzas, pastas, and
+                                Mediterranean dishes.</p>
+                        </div>
+                        <div class="plantCat">
+                            <p>Herbs</p>
+                        </div>
+                    </div>
+
+                    <div class="plant-card-html"
+                        style="background-image: url('./uploads/BellPepper.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; ">
+                        <div>
+                            <h3 class="plantTitle">Bell Pepper</h3>
+                            <p class="plantDesc">Bell peppers are colorful, sweet vegetables rich in vitamins, used in
+                                salads, stir-fries, and roasting.</p>
+                        </div>
+                        <div class="plantCat">
+                            <p>Fruits & Vegetables</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -89,11 +254,18 @@
                 <h2>Filter and Discover</h2>
                 <nav class="section__nav">
                     <ul class="section__list">
-                        <li class="section__item"><a href="#">Fruit and vegetables</a></li>
-                        <li class="section__item"><a href="#">Herbs</a></li>
-                        <li class="section__item"><a href="#">Trees & Shurbs</a></li>
-                        <li class="section__item"><a href="#">Flowering Plants</a></li>
-                        <li class="section__item"><a href="#">Indoor Plants</a></li>
+                        <li class="section__item"><button class="list__button" data-category="all">All Plants</button>
+                        <li class="section__item"><button class="list__button"
+                                data-category="Fruits & Vegetables">Fruits & Vegetables</button></li>
+                        <li class="section__item"><button class="list__button" data-category="Herbs">Herbs</button></li>
+                        <li class="section__item"><button class="list__button" data-category="Trees & Shrubs">Trees &
+                                Shrubs</button></li>
+                        <li class="section__item"><button class="list__button"
+                                data-category="Flowering Plants">Flowering Plants</button></li>
+                        <li class="section__item"><button class="list__button" data-category="Indoor Plants">Indoor
+                                Plants</button></li>
+
+                        </li>
                     </ul>
                     <div class="main__search">
                         <input class="search-input" type="text" placeholder="Search for your Plant">
@@ -101,25 +273,51 @@
                             <svg class="search-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M16.6725 16.6412L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
-                                    stroke="#1C4920" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
                     </div>
                 </nav>
-                <div class="grid-group">
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
-                    <div class="plant-card"></div>
+
+                <div class="grid-group" id="allPlants">
                 </div>
+
+
+                <div class="modal" style="display: none;">
+                    <span class="close">&times;</span>
+                    <h1>Plant Report</h1>
+                    <div class="plant-details">
+                        <div class="plant-details__group">
+                            <div class="plant-details__img"></div>
+                            <div class="plant-information">
+                                <div>
+                                    <h3><span></span><span></span></h3>
+                                    <p class="plant-description"></p>
+                                </div>
+                                <div class="plant-specific-info">
+                                    <p>-<span class="highlight">Sunlight Requirements:</span><span id="sunlight"></span>
+                                    </p>
+                                    <p>-<span class="highlight">Watering Needs:</span><span id="watering"></span></p>
+                                    <p>-<span class="highlight">Optimal Temperature:</span><span
+                                            id="temperature"></span></p>
+                                    <p>-<span class="highlight">Soil Type:</span><span id="soil"></span></p>
+                                    <p>-<span class="highlight">Soil pH:</span><span id="soilPH"></span></p>
+                                    <p>-<span class="highlight">Pests & Diseases:</span><span id="pestsDeseas"></span>
+                                    </p>
+                                    <pre>-<span class="highlight">Common Problems & Solutions:</span><br> <span id="problems"></span></pre>
+                                    <p>-<span class="highlight">Time to Maturity:</span><span id="maturityTime"></span>
+                                    </p>
+                                    <p>-<span class="highlight">Uses:</span><span id="uses"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="print-btn" onclick="window.print()">Print Report</button>
+
+                    <div class="colored">
+                    </div>
+                </div>
+
                 <p class="more">See more</p>
             </div>
         </section>
@@ -136,14 +334,14 @@
                 <div>
                     <li><a href="main.html">Home</a></li>
                     <li><a href="mailto:waelcoding12@gmail.com">Support</a></li>
-                    <li><a href="#Community">Community</a></li>
+                    <li><a href="https://www.reddit.com/r/farming/" target="_blank">Community</a></li>
                 </div>
                 <div>
                     <li><a href="diagnose.html">Plant Diagnosis</a></li>
-                    <li><a href="#Marketplace">Marketplace</a></li>
+                    <li><a href="plant-base.html">Plants Database</a></li>
                     <li><a href="weather.html">Weather</a></li>
                 </div>
-                <li><a href="plant-base.html">Plants Database</a></li>
+
             </ul>
         </nav>
         <div>
@@ -157,7 +355,8 @@
                 </svg>
             </a>
             <a href="mailto:waelcoding12@gmail.com">
-                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="800" height="800" viewBox="0 0 512 512">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="800" height="800"
+                    viewBox="0 0 512 512">
                     <path fill="#fff"
                         d="M488.22 75.724H23.78c-.669 0-1.327.046-1.982.1L44.095 90.85a19.015 19.015 0 0 1 3.802 1.966l208.104 140.243L464.103 92.816l.005-.003 25.27-17.03c-.386-.019-.767-.059-1.158-.059z" />
                     <path fill="#fff"
@@ -175,7 +374,10 @@
             <p class="made-by">Made by Benseghir Ouail</p>
         </div>
     </footer>
+
     <script src="Src/menu.js"></script>
+    <script src="Src/plant-card.js"></script>
+
 </body>
 
 </html>

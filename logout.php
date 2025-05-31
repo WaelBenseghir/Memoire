@@ -1,4 +1,4 @@
 <?php
-session_destroy();
-header("location:index.html");
+    session_destroy();
+    header("location:index.html");
 ?>

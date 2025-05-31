@@ -1,0 +1,184 @@
+@import "style.css";
+@import "utils.css";
+
+
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    
+  }
+
+  body::before {
+  visibility: hidden;
+}
+
+}
+
+body {
+  margin: 0;
+  background-color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/test.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.modal{
+    background-color: var(--clr-white);
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 16px;
+}
+
+.test{
+    font-weight: var(--fw-regular);
+}
+
+
+.print-btn {
+    display: block;
+    margin-top: 1rem;
+    text-decoration: underline;
+    width: fit-content;
+}
+
+.highlight{
+    font-weight: var(--fw-semi-bold);
+    margin-right: .5rem;
+}
+
+.modal h1{
+    font-weight: var(--fw-medium);
+    font-size: var(--size-64);
+    padding-bottom: 1rem;
+    border-bottom: 3px solid black;
+    text-align: center;
+}
+
+.plant-details{
+    padding: 3rem;
+}
+
+.plant-details__img{
+    width: 100%;
+    max-width: 530px;
+    height: 350px;
+    margin-inline: auto;
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.modal__title{
+    font-size: var(--size-36);
+    font-weight: var(--fw-semi-bold);
+    font-family: var(--ff-secondary);
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 1rem;
+}
+
+.plant-description{
+    text-align: center;
+    font-size: var(--size-18);
+    max-width: 530px;
+    margin-inline: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.plant-specific-info{
+    padding-inline: 1rem;
+}
+
+.plant-specific-info p, pre{
+    margin-bottom: .7rem;
+}
+
+pre{
+    font-size: 1rem;
+}
+
+.print-btn{
+    margin-inline: auto;
+    margin-bottom: 1rem;
+    font-size: var(--size-18);
+}
+
+.colored{
+    background-color: #9DA677;
+    padding: 6rem;
+}
+
+pre{
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+    overflow-x: auto;
+}
+
+@media (min-width: 850px) {
+    .plant-details__group{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .plant-details__img{
+        width: 320px;
+        height: 420px;
+        margin: 0;
+    }
+
+    .plant-specific-info{
+        padding: 1rem 0;
+    }
+
+    .modal__title , .plant-description, .modal h1{
+        text-align: start;
+    }
+
+    .plant-description{
+        max-width: 450px;
+        margin-inline: 0;
+    }
+
+    .modal h1{
+        padding-left: 3rem;
+    }
+
+    .plant-details{
+        padding: 3rem;
+    }
+    .modal__title{
+        margin-top: 0;
+    }
+
+    body{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+
+
+
+

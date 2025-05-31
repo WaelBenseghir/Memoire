@@ -10,12 +10,13 @@
 }
 
 
-.section__list a{
+
+.list__button{
     color: var(--clr-black);
-    font-size: var(--size-24);
+    font-size: 1.25rem;
     border: 1px solid var(--clr-black);
     border-radius: 60px;
-    padding: .5rem 1rem;
+    padding: .5rem 1.5rem;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -23,7 +24,7 @@
     font-weight: var(--fw-medium);
 }
 
-.section__list a:hover{
+.list__button:hover{
     background-color: var(--clr-black);
     color: var(--clr-white);
 }
@@ -55,16 +56,6 @@ h2, .arrow{
 }
 
 
-.flex-item-1{
-    background-image: url(../../../img/lemon.webp);
-}
-.flex-item-2{
-    background-image: url(../../../img/tomato.webp);
-}
-.flex-item-3{
-    background-image: url(../../../img/spinach.webp);
-}
-
 
 @media (min-width: 700px){
     .section__list{
@@ -72,10 +63,9 @@ h2, .arrow{
         gap: .5rem;
     }
 
-
-    .section__list a{
+    .list__button{
         color: var(--clr-black);
-        font-size: var(--size-18);
+        font-size: 1.25rem;
         border: 1px solid var(--clr-black);
         border-radius: 60px;
         padding: .5rem 3rem;
@@ -90,7 +80,9 @@ h2, .arrow{
         margin-bottom: .3rem;
     }
 
-    
+    .flex-group{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (min-width: 1024px){
@@ -100,19 +92,16 @@ h2, .arrow{
     .section__item{
         margin-bottom: 0;
     }
-    .flex-group{
-        display: flex;
-        align-items: center;
-        
-    }
+
     .card{
         flex-grow: 1;
         transition: .3s ease-out;
     }
-    .card:hover{
+    .card:hover, .plant-card:hover{
         flex-grow: 1;
         flex-grow: 2;
     }
 }
+
 
 
